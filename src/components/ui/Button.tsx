@@ -2,15 +2,22 @@ import type { ButtonHTMLAttributes } from "react";
 import { cn } from "@/utils/cn";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "outline" | "ghost";
+  size?: "sm" | "md" | "lg";
 };
 
-export function Button({ className, variant = "primary", ...props }: ButtonProps) {
+export function Button({ className, variant = "primary", size = "md", type = "button", ...props }: ButtonProps) {
   const variants = {
-    primary: "bg-brand text-white hover:bg-brand-hover",
-    secondary: "border border-border-default bg-white text-text-primary hover:bg-bg-subtle",
-    ghost: "text-text-secondary hover:bg-bg-subtle hover:text-text-primary",
+    primary: "border border-transparent bg-brand text-white shadow-xs hover:bg-brand-hover",
+    secondary: "border border-border-subtle bg-bg-subtle text-text-primary hover:bg-border-subtle",
+    outline: "border border-border-subtle bg-white text-text-primary hover:border-brand hover:bg-bg-surface",
+    ghost: "border border-transparent bg-transparent text-text-secondary hover:bg-bg-subtle hover:text-text-primary",
+  };
+  const sizes = {
+    sm: "min-h-9 px-4 text-xs",
+    md: "min-h-11 px-5 text-sm",
+    lg: "min-h-12 px-6 text-sm sm:text-base",
   };
 
-  return <button className={cn("inline-flex min-h-10 items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:pointer-events-none disabled:opacity-50", variants[variant], className)} {...props} />;
+  return <button type={type} className={cn("inline-flex items-center justify-center gap-2 rounded-pill py-2.5 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/30 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50", sizes[size], variants[variant], className)} {...props} />;
 }

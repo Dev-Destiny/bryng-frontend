@@ -26,7 +26,7 @@ export function WorkspaceShell({ mode, children }: { mode: UserMode; children: R
   return (
     <div className="min-h-dvh">
       <header className="sticky top-0 z-20 border-b border-border-default bg-white/90 backdrop-blur">
-        <div className="mx-auto flex h-[68px] max-w-[1440px] items-center justify-between gap-4 px-4 sm:px-7">
+        <div className="mx-auto flex h-17 max-w-360 items-center justify-between gap-4 px-4 sm:px-7">
           <Link href={`/${mode}/dashboard`} className="inline-flex items-center gap-2.5 font-bold tracking-tight">
             <span className="grid size-9 place-items-center rounded-xl bg-brand text-white"><BookOpenCheck size={18} aria-hidden="true" /></span>
             <span className="text-lg">bryng</span>
@@ -39,9 +39,9 @@ export function WorkspaceShell({ mode, children }: { mode: UserMode; children: R
           </div>
         </div>
       </header>
-      <div className="mx-auto grid max-w-[1440px] gap-6 px-4 py-6 sm:px-7 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-9 lg:py-9">
-        <aside className="lg:sticky lg:top-[92px] lg:h-[calc(100dvh-116px)]">
-          <p className="mb-3 px-3 text-[11px] font-bold uppercase tracking-[0.14em] text-text-muted">{isClient ? "Client space" : "Professional space"}</p>
+      <div className="mx-auto grid max-w-360 gap-6 px-4 py-6 sm:px-7 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-9 lg:py-9">
+        <aside className="lg:sticky lg:top-23 lg:h-[calc(100dvh-116px)]">
+          <p className="mb-3 px-3 text-ui-caption font-bold uppercase tracking-widest text-text-muted">{isClient ? "Client space" : "Professional space"}</p>
           <nav aria-label={`${mode} workspace`} className="flex gap-2 overflow-x-auto lg:flex-col">
             {navigation[mode].map(({ href, label, Icon }) => {
               const active = pathname === href;
