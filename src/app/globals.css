@@ -6,13 +6,43 @@
   --color-brand: var(--brand);
   --color-brand-hover: var(--brand-hover);
   --color-brand-subtle: var(--brand-subtle);
+  --color-brand-border: var(--brand-border);
   --color-bg-base: var(--bg-base);
   --color-bg-surface: var(--bg-surface);
   --color-bg-subtle: var(--bg-subtle);
+  --color-bg-muted: var(--bg-muted);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
+  --color-border-subtle: var(--border-subtle);
   --color-border-default: var(--border-default);
+  --color-border-strong: var(--border-strong);
+  --color-dark-bg: var(--dark-bg);
+  --color-dark-surface: var(--dark-surface);
+  --color-success: var(--success);
+  --color-success-subtle: var(--success-subtle);
+  --color-error: var(--error);
+  --color-error-subtle: var(--error-subtle);
+  --color-field-success: var(--field-success);
+  --color-provider-button-border: var(--provider-button-border);
+  --color-provider-button-text: var(--provider-button-text);
+  --color-provider-button-hover: var(--provider-button-hover);
+  --text-ui-label: 0.8125rem;
+  --text-ui-caption: 0.6875rem;
+  --text-ui-overline: 0.75rem;
+  --text-auth-title: 2rem;
+  --text-auth-title--line-height: 1.2;
+  --text-auth-title--letter-spacing: -0.025em;
+  --text-auth-title-lg: 2.25rem;
+  --text-auth-title-lg--line-height: 1.2;
+  --text-auth-title-lg--letter-spacing: -0.025em;
+  --radius-wrapper: var(--radius-wrapper);
+  --radius-inner-card: var(--radius-inner-card);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-pill: var(--radius-pill);
 }
 
 :root {
@@ -20,13 +50,34 @@
   --bg-base: #faf9f6;
   --bg-surface: #ffffff;
   --bg-subtle: #f5f5f1;
+  --bg-muted: #eeeeee;
   --brand: #6e44ff;
   --brand-hover: #5a4bd1;
   --brand-subtle: #f3f0ff;
+  --brand-border: #e2ddff;
   --text-primary: #18181b;
   --text-secondary: #575762;
   --text-muted: #89899a;
+  --border-subtle: #e7e2da;
   --border-default: #e7e2da;
+  --border-strong: #c8c8be;
+  --dark-bg: #12131a;
+  --dark-surface: #1b1c24;
+  --success: #16a34a;
+  --success-subtle: #dcfce7;
+  --error: #b42318;
+  --error-subtle: #fef3f2;
+  --field-success: #15803d;
+  --provider-button-border: #747775;
+  --provider-button-text: #1f1f1f;
+  --provider-button-hover: #f8f8f8;
+  --radius-wrapper: 28px;
+  --radius-inner-card: 22px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
 }
 
 * {
